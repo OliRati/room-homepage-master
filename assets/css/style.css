@@ -1,0 +1,196 @@
+@import url("./reset.css");
+
+@font-face {
+    font-family: "LeageSpartan";
+    src: url("../font/LeagueSpartan-VariableFont_wght.ttf");
+}
+
+:root {
+    --color-white: hsl(0, 100%, 100%);
+    --color-grey-500: hsl(0, 0%, 63%);
+    --color-grey-800: hsl(0, 0%, 27%);
+    --color-black: hsl(0, 0%, 0%);
+}
+
+* {
+    font-family: "LeageSpartan";
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70%;
+}
+
+.top .chapter {
+    width: 40%;
+    margin: 5rem;
+}
+
+.top .chapter h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.top .chapter .goShopping {
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 1.5rem;
+    color: var(--color-grey-500)
+}
+
+.top .chapter .goShopping div {
+    margin-left: 2rem;
+}
+
+.top .herocontainer {
+    position: relative;
+    width: 60vw;
+}
+
+.top .herocontainer .hero {
+    width: 100%;
+    height: 100%;
+}
+
+.top .herocontainer .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.herocontainer .controls {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 18.8vw;
+    background-color: var(--color-black);
+}
+
+.herocontainer .controls .button {
+    background-color: var(--color-black);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.menu nav ul {
+    display: flex;
+    margin-left: 3rem;
+}
+
+.menu nav ul li {
+    margin: 0.8rem;
+    color: var(--color-white);
+}
+
+.menu input[type="checkbox"]:checked~ul {
+    display: block;
+}
+
+.menu input[type="checkbox"]~ul {
+    display: none;
+}
+
+/* Bottom panel */
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom .chapter {
+    width: 40vw;
+    margin: 3rem;
+}
+
+.bottom .chapter h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.bottomimage {
+    width: 30vw;
+}
+
+.bottomimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+
+    .container {
+        height: unset;
+    }
+
+    .top,
+    .bottom {
+        flex-wrap: wrap;
+        height: unset;
+    }
+
+    .top .herocontainer {
+        position: relative;
+        width: 100vw;
+    }
+
+    .top .herocontainer .controls {
+        right: 0;
+        left: unset;
+        width: 8rem;
+    }
+
+    .top .chapter,
+    .bottom .chapter {
+        width: 100vw;
+    }
+
+    .bottomimage {
+        width: 100vw;
+    }
+
+    .menu nav ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .top .chapter,
+    .bottom .chapter {
+        margin: 2rem;
+    }
+
+    .top .chapter h1 {
+        font-size: 2.5rem;
+    }
+
+    .top .chapter h2 {
+        font-size: 1rem;
+    }
+}
